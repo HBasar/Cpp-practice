@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int dollar{100},quarter{25},dime{10},nickel{5},penny{1};
+    int cent;
+    cout<<"how much cent ";
+    cin>>cent;
+    cout<<"in exchange"<<endl;
+    int left_quater;
+    int left_dime;
+    int left_nickel;
+    int left_penny;
+    dollar=cent/dollar;
+    quarter=(cent-dollar*100)/quarter;
+    dime=(cent-(quarter*25+dollar*100))/dime;
+    nickel=(cent-(dime*10+quarter*25+dollar*100))/nickel;
+    penny=(cent-(nickel*5+dime*10+quarter*25+dollar*100))/penny;
+    cout<<"your can get dollar="<<dollar<<endl;
+    cout<<"or your can get quarter="<<quarter<<endl;
+    cout<<"or your can get dime="<<dime<<endl;
+    cout<<"or your can get nickel="<<nickel<<endl;
+    cout<<"or your can get penny="<<penny<<endl;
+
+    return 0;
+}
+
+
+//////////////////////////////////////udemy solution/////////////////////////////////
+#include <iostream>
+using namespace std;
+int main()
+{
+    int dollar_value{100},quarter_value{25},dime_value{10},nickel_value{5},penny_value{1};
+    int dollar{0},quarter{0},dime{0},nickel{0},penny{0};
+    int cent;
+
+    int balance;
+    cout<<"how much cent ";
+    cin>>cent;
+    cout<<"in exchange"<<endl;
+    dollar=cent/dollar;
+    balance=cent%dollar_value;
+
+    quarter=balance/quarter_value;
+    balance%=quarter_value;
+
+    dime=balance/dime_value;
+    balance%=dime_value;
+
+    nickel=balance/nickel_value;
+    balance%=nickel_value;
+
+    penny=balance;
+
+    cout<<"your can get dollar="<<dollar<<endl;
+    cout<<"or your can get quarter="<<quarter<<endl;
+    cout<<"or your can get dime="<<dime<<endl;
+    cout<<"or your can get nickel="<<nickel<<endl;
+    cout<<"or your can get penny="<<penny<<endl;
+    cout<<endl;
+
+    return 0;
+}

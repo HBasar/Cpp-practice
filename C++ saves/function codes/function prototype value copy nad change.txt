@@ -1,0 +1,55 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+#include <vector>
+using namespace std;
+
+void pass_by_value(int num);           //prototypes
+void pass_by_value2(string s);
+void pass_by_value3(vector<string> v);
+
+
+void pass_by_value(int num){
+    num=1000;
+}
+void pass_by_value2(string s){
+    s="changed";
+}
+void pass_by_value3(vector<string> v){
+    v.clear();
+}
+void print_vector(vector<string> v){
+    for(auto s:v)
+        cout<<s<<" ";
+    cout<<endl;
+}
+
+
+int main()
+{
+    int num{10};
+    int another_num{20};
+    cout<<"num before calling pass_by_value1: "<<num<<endl;
+    pass_by_value(num);
+    cout<<"num after calling pass_by_value1: "<<num<<endl;
+
+    string name{"frank"};
+    cout<<"\nname before calling vcalue2: "<<name<<endl;
+    pass_by_value2(name);
+    cout<<"\nname after calling vcalue2: "<<name<<endl;
+
+    vector<string>stooges{"rayhan","shitol","masrafi"};
+    cout<<"\nstooges before calling value3: ";
+    print_vector(stooges);
+    pass_by_value3(stooges);
+    cout<<"\nstooges after calling value3: ";
+    print_vector(stooges);
+    cout<<endl;
+
+
+
+    return 0;
+}

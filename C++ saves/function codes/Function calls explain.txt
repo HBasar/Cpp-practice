@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+#include <vector>
+using namespace std;
+void func2(int &x,int y,int z){
+    x+= y+z; //(x= x+y+z)
+}
+int func1(int a, int b){
+    int result{};
+    result= a + b;
+    func2 (result, a, b);
+    return result;
+}
+
+int main()
+{
+    int x {40};
+    int y {60};
+    int z {};
+    z=func1(x, y);
+    cout<< z <<endl;
+
+
+    return 0;
+}

@@ -1,0 +1,35 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+
+    double course1_cgpa{};
+    double course2_cgpa{};
+    double course3_cgpa{};
+    double course4_cgpa{};
+    cout<<"Type course 1 CGPA: "<<endl;
+    cin>>course1_cgpa;
+    cout<<"Type course 2 CGPA: "<<endl;
+    cin>>course2_cgpa;
+    cout<<"Type course 3 CGPA: "<<endl;
+    cin>>course3_cgpa;
+    cout<<"Type course 4 CGPA: "<<endl;
+    cin>>course4_cgpa;
+
+    cout<<"-----------------------------"<<endl;
+    cout<<endl;
+    cout<<"Your Average CGPA is: ";
+    double Average_cgpa{};
+    Average_cgpa=((course1_cgpa+course2_cgpa+course3_cgpa+course4_cgpa)/4);
+    cout<<Average_cgpa;
+    cout<<endl;
+
+
+
+    return 0;
+}

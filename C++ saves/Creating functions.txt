@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+const double pi{3.1416};
+double clac_area_circle(double radius){
+    return pi*radius*radius;
+}
+double clac_vol_cylinder(double radius,double height){
+    return clac_area_circle(radius)*height;
+}
+void area_circle(){
+    double radius{};
+    cout<<"Enter radious of the circle: "<<endl;
+    cin>>radius;
+    cout<<"the area of the radius is "<<radius<<" is "<<clac_area_circle(radius)<<endl;
+}
+
+void cylinder(){
+    double radius{};
+    double height{};
+    cout<<"Enter radious of the circle: "<<endl;
+    cin>>radius;
+    cout<<"Enter  height of the circle: "<<endl;
+    cin>>height;
+    cout<<"the volum of the cylinder is "<<radius<<" and height "<<height<<" is "<<clac_vol_cylinder(radius,height)<<endl;
+
+}
+
+int main()
+{
+    area_circle();
+    cylinder();
+
+    return 0;
+}

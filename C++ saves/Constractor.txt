@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+class book{
+   public:
+       string title;
+       string writer;
+       int pages;
+       book(string atitle,string awriter,int apages){
+           title=atitle;
+           writer=awriter;
+           pages=apages;
+       }
+};
+int main()
+{
+    book book1("harry porter","henry jons",1000);
+    book book2("harry lola","sin jons",100);
+
+    cout<<book2.title;
+
+return 0;
+}

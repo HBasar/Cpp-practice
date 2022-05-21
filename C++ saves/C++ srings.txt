@@ -1,0 +1,101 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+int main()
+{
+    string s0;
+    string s1{"Apple"};
+    string s2{"banana"};
+    string s3{"kiwi"};
+    string s4{"apple"};
+    string s5{s1};         //Apple
+    string s6{s1,0,3};    //App
+    string s7(10,'X');   //XXXXXXXXXX
+
+    cout<<s0<<endl;
+    cout<<s0.size()<<endl;
+
+    cout<<"s1: "<<s1<<endl;
+    cout<<"s2: "<<s2<<endl;
+    cout<<"s3: "<<s3<<endl;
+    cout<<"s4: "<<s4<<endl;
+    cout<<"s5: "<<s5<<endl;
+    cout<<"s6: "<<s6<<endl;
+    cout<<"s7: "<<s7<<endl;
+
+    cout<<"\n comapre"<<"\n-------------------------------------"<<endl;
+    cout<<boolalpha;
+    cout<<s1<<"=="<<s5<<": "<<(s1==s5)<<endl;
+    cout<<s1<<"=="<<s2<<": "<<(s1==s2)<<endl;
+    cout<<s1<<"=="<<"Apple"<<": "<<(s1=="Apple")<<endl;
+
+    cout<<"\nAssignment"<<"\n-------------------------------------"<<endl;
+
+    s1="watermelon";
+    cout<<"s1 is now: "<<s1<<endl;
+    s1=s2;                                          //banana from 1st string
+    cout<<"s2 is now: "<<s2<<endl;
+    s3="Frank";
+    cout<<"s3 is now: "<<s3<<endl;
+    s3[0]='t';
+    cout<<"s3 1st latter change: "<<s3<<endl;       //s3[0] and s3.at(0) ar same thing.
+    s3.at(1)='o';
+    cout<<"s3 2nd latter change also: "<<s3<<endl;
+
+    s3=s5+" and "+s2+" juce ";                      // right to use
+    cout<<"now s3 is: "<<s3<<endl;
+  //s3="nice "+ " cold "+s5+" juce ";               // compiler error
+ // cout<< "now s3: "<<s3<<endl;
+
+    s1="Apple";
+    for(size_t i{0};i<s1.size(); ++i)
+    cout<<s1.at(i);
+    cout<<endl;
+
+    for(char C: s1)
+    cout<<C;
+    cout<<endl;
+    cout<<endl;
+
+    s1="This is a test";
+    cout<<s1.substr(0,4)<<endl;
+    cout<<s1.substr(5,2)<<endl;
+    cout<<s1.substr(8,1)<<endl;
+    cout<<s1.substr(10,4)<<endl;
+
+    s1.erase(0,4);                      //erase this
+    cout<<"s1 now is: "<<s1<<endl;
+
+
+    cout<<"\n next-----------------------------------"<<endl;
+
+
+    string fullname{};
+    cout<<"enter your full name: ";
+    getline(cin,fullname);
+    cout<<"your full name is: "<<fullname<<endl;
+
+
+    cout<<"\n next-----------------------------------"<<endl;
+    s1="the secret word is boo";
+    string word{};
+    
+    cout<<"the secret word is boo"<<endl;
+    cout<<"enter the word to find location: ";
+    cin>>word;
+
+
+    size_t position=s1.find(word);
+    if(position !=string::npos)
+        cout<<"found "<<word<<" at position: "<<position<<endl;
+
+    else
+
+        cout<<"soryy "<<word<<" not found "<<endl;
+    cout<<endl;
+
+
+
+    return 0;
+}

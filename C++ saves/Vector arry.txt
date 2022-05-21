@@ -1,0 +1,111 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+     vector <char> vowels{'a','e','i','o','u'};
+     cout<<vowels[1]<<endl;
+     cout<<vowels[3]<<endl;
+
+    vector<int>score{98,89,100};
+
+    cout<<"\nTest score in arry syntex:"<<endl;
+
+    cout<<score[0]<<endl;
+    cout<<score[1]<<endl;
+    cout<<score[2]<<endl;
+
+    cout<<"\nTest score in vector syntex:"<<endl;
+
+    cout<<score.at(0)<<endl;
+    cout<<score.at(1)<<endl;
+    cout<<score.at(2)<<endl;
+
+    cout<<score.size()<<" many score"<<endl;
+
+    cout<<"\ngive 3 score"<<endl;
+    cin>>score.at(0);
+    cin>>score.at(1);
+    cin>>score.at(2);
+
+    cout<<"\nUpdet score"<<endl;
+
+    cout<<score.at(0)<<endl;
+    cout<<score.at(1)<<endl;
+    cout<<score.at(2)<<endl;
+
+    cout<<score.size()<<" many score"<<endl;
+
+    int exscore;
+    cin>>exscore;
+    score.push_back(exscore);
+    cin>>exscore;
+    score.push_back(exscore);
+
+    cout<<"\nintUpdet score"<<endl;
+
+    cout<<score.at(0)<<endl;
+    cout<<score.at(1)<<endl;
+    cout<<score.at(2)<<endl;
+    cout<<score.at(3)<<endl;
+    cout<<score.at(4)<<endl;
+
+    cout<<score.size()<<" many score"<<endl;
+    vector<vector<int>>pointing
+    {
+       {1,2,3,4},
+       {1,2,9,6},
+       {3,5,0,4},
+    };
+    cout<<"\npointing using arry"<<endl;
+    cout<<pointing[2][3]<<endl;
+
+    cout<<"\npointing using arry"<<endl;
+    cout<<pointing.at(1).at(2)<<endl;
+
+
+
+    return 0;
+}
+
+
+///////////////////////////section challenge/////////////////////////////////////
+
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+    vector<int>vector1;
+    vector<int>vector2;
+
+    vector1.push_back(10);
+    vector1.push_back(20);
+
+    cout<<vector1.at(0)<<endl;
+    cout<<vector1.at(1)<<endl;
+    cout<<"your size "<<vector1.size()<<endl;
+
+    vector2.push_back(100);
+    vector2.push_back(200);
+
+    cout<<vector2.at(0)<<endl;
+    cout<<vector2.at(1)<<endl;
+    cout<<"your size "<<vector2.size()<<endl;
+
+    vector<vector<int>>vector_2d;
+    vector_2d.push_back(vector1);
+    vector_2d.push_back(vector2);
+
+    cout<<vector_2d.at(0).at(0)<<endl;
+    cout<<vector_2d.at(0).at(1)<<endl;
+
+    cin>>vector1.at(0);
+
+    cout<<vector_2d.at(0).at(0)<<endl;
+    cout<<vector_2d.at(0).at(1)<<endl;
+
+    cout<<vector1.at(0)<<endl;
+
+    return 0;
+}

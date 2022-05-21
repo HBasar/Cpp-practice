@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+class student{
+   public:
+       string name;
+       string department;
+       double gpa;
+       student(string aname,string adepartment,double agpa){
+           name=aname;
+           department=adepartment;
+           gpa=agpa;}
+           bool honorable(){
+               if (gpa>=3.5){
+                return true;
+               }return false;
+           }
+       };
+int main()
+{
+    student student1("Abik","biochemistry",2.2);
+    student student2("lolalisom","computer science",3.7);
+
+    cout<<student2.honorable();
+
+return 0;
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+double cal_cost(double base_cost, double tax_rate=0.07);
+double cal_cost(double base_cost, double tax_rate){
+    return base_cost += (base_cost*tax_rate);
+}
+void greeting(string name,string prefix="Mr",string suffix=" ");
+void greeting(string name,string prefix,string suffix){
+    cout<<"hello "<<prefix+" "+name+" "+suffix<<endl;
+}
+
+int main()
+{
+    greeting("Basar");
+    double cost(0);
+    cost = cal_cost(100);
+    cout<<cost<<endl;
+
+    return 0;
+}

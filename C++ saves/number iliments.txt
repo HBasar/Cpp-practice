@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int age{20};
+int main()
+{
+    char number{'j'};
+    cout<<"my middle initial is "<< number<<endl;
+    unsigned short int exam_score{55};
+    cout<<"my exam score is "<<exam_score<<endl;
+    int country{70};
+    cout<<"there was "<<country<<" country in my meeting"<<endl;
+    long people{206000000};
+    cout<<"there are about "<<people<<" people in BD"<<endl;
+    long long earth{70000000000};
+    cout<<"people number on earth is "<<earth<<endl;
+    long long distance{900000000000000000};
+    cout<<"Is this enough "<<distance<<endl;
+    float shortdotnum{2.45};
+    cout<<shortdotnum<<endl;
+    double dotnum{3.14159};
+    cout<<dotnum<<endl;
+    bool zero{false};
+    cout<<zero<<endl;
+    bool one{true};
+    cout<<one<<endl;
+    
+    return 0;
+}

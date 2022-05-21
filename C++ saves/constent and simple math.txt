@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int largeroom;
+    int smallroom;
+    cout<<"how many large room needed?";
+    cin>>largeroom;
+    cout<<"how many small room needed?";
+    cin>>smallroom;
+    double Lprise(30.0);
+    double Sprise(25.0);
+    double Tax(0.06);
+    double time(30);
+    cout<<"your large room count: "<<largeroom<<endl;
+    cout<<"your small room count: "<<smallroom<<endl;
+    cout<<"per large room cost $"<<Lprise<<endl;
+    cout<<"per small room cost $"<<Sprise<<endl;
+    cout<<"Total cost $"<<(largeroom*Lprise)+(smallroom*Sprise)+((largeroom*Lprise)+(smallroom*Sprise))*Tax<<endl;
+    cout<<"This Bill is valid for days: "<<time<<endl;
+
+    return 0;
+}
