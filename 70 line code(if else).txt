@@ -1,0 +1,148 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+    vector<int>number{};
+    char chose{};
+    do{
+    cout<<"P-Print number"<<endl;
+    cout<<"A-Add number"<<endl;
+    cout<<"S-smallest number"<<endl;
+    cout<<"M-mean of the numbers"<<endl;
+    cout<<"L-largest number"<<endl;
+    cout<<"Q-Quit\n"<<endl;
+
+    cout<<"Enter your choice:?"<<endl;
+    cin>>chose;
+    if(chose=='P'||chose=='p'){
+        if(number.size()==0)
+        cout<<"[]-number not added"<<endl;
+        else{
+        cout<<"[";
+        for(auto num:number)
+        cout<<num<<" ";
+        cout<<"]"<<endl;}
+    }else if (chose=='A'||chose=='a'){
+        int addnum{};
+        cout<<"Enter a Number:?"<<endl;
+        cin>>addnum;
+        number.push_back(addnum);
+        cout<<addnum<<"added"<<endl;}
+    else if(chose=='M'||chose=='m'){
+        if(number.size()==0)
+            cout<<"no data"<<endl;
+        else {
+            double total{};
+            for(auto num: number){
+                total=total+num;
+            cout<<"the mean is:"<<total/number.size()<<endl;}
+        }
+    }
+        else if(chose=='S'||chose=='s'){
+            if(number.size()==0)
+            cout<<"no data"<<endl;
+            else{
+                int smallest=number.at(0);
+                for(auto num:number)
+                    if(num<smallest)
+                    smallest=num;
+                cout<<"The smallest is:"<<smallest<<endl;
+            }
+
+    }else if(chose=='L'||chose=='l'){
+        if(number.size()==0)
+            cout<<"no data"<<endl;
+            else{
+                int largest=number.at(0);
+                for(auto num:number)
+                    if(num>largest)
+                    largest=num;
+                cout<<"The largest is:"<<largest<<endl;
+            }
+        }
+    }
+    while(chose!='Q');
+    cout<<"Good bye!! press any key to end"<<endl;
+
+    return 0;
+}
+
+
+
+/////////////////////////////////
+
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+    vector<int>number{};
+    char chose{};
+    do{
+         cout<<"P-Print number"<<endl;
+    cout<<"A-Add number"<<endl;
+    cout<<"S-smallest number"<<endl;
+    cout<<"M-mean of the numbers"<<endl;
+    cout<<"L-largest number"<<endl;
+    cout<<"Q-Quit\n"<<endl;
+
+    cout<<"Enter a chose:?"<<endl;
+    cin>>chose;
+    if(chose=='P'||chose=='p'){
+        if(number.size()==0){
+            cout<<"[]-number not added"<<endl;
+        }else{
+            cout<<"[";
+        for(auto num:number)
+            cout<<num<<" ";
+        cout<<"]"<<endl;
+    }
+    }
+    if(chose=='A'||chose=='a'){
+            int addnum{};
+        cout<<"add a number:"<<endl;
+    cin>>addnum;
+        number.push_back(addnum);
+            cout<<"number added"<<endl;
+
+    }if(chose=='M'||chose=='m'){
+        if(number.size()==0)
+            cout<<"No data"<<endl;
+        else{
+            double total{};
+            for(auto num:number){
+                total=total+num;
+            cout<<"The mean is:"<<total/number.size()<<endl;}
+        }
+    }if(chose=='S'||chose=='s'){
+        if(number.size()==0)
+            cout<<"No data"<<endl;
+            else{
+                int smallest=number.at(0);
+                for(auto num:number)
+                    if(smallest>num)
+                    smallest=num;
+                cout<<"smallest number"<<smallest<<endl;
+            }
+    }if(chose=='L'||chose=='l'){
+        if(number.size()==0)
+            cout<<"No data"<<endl;
+            else{
+                int largest=number.at(0);
+                for (auto num:number)
+                if(largest<num)
+                largest=num;
+                cout<<"largest number is : "<<largest<<endl;
+
+            }
+    }
+
+
+    }while(chose!='Q');
+    cout<<"Good bye!! press any key to end"<<endl;
+
+    return 0;
+}
